@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Emotion Detector</title>
+
+<style>
+
+body{
+background: linear-gradient(120deg,#74ebd5,#ACB6E5);
+font-family: Arial;
+text-align:center;
+margin-top:120px;
+}
+
+h1{
+color:#333;
+font-size:40px;
+}
+
+input{
+padding:12px;
+width:300px;
+border-radius:8px;
+border:none;
+font-size:16px;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#ff6b6b;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3b3b;
+}
+
+.result{
+margin-top:30px;
+font-size:28px;
+color:white;
+}
+
+.box{
+background:white;
+padding:40px;
+border-radius:15px;
+width:400px;
+margin:auto;
+box-shadow:0px 0px 20px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>AI Emotion Detection 🤖</h1>
+
+<form method="POST">
+
+<input type="text" name="text" placeholder="Enter your sentence">
+
+<br><br>
+
+<button type="submit">Detect Emotion</button>
+
+</form>
+
+{% if emotion %}
+
+<div class="result">
+<h2>Emotion:{{emotion}}</h2>
+<h1>{{emoji}}</h1>
+
+
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
